@@ -1,0 +1,73 @@
+:root{
+    --font-family: "Red Hat Display", sans-serif;
+    --bg-color: #788698;
+    --calculator-color-border: #001e34;
+    --keys-color: #002b4a;
+    --keys-equal: #ffa800;
+    --text-color: #fff;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+}
+
+.container{
+    border: 3px solid #001e34;
+    border-radius: 15px;
+    width: 360px;
+    height: 640px;
+    background: var(--calculator-color-border);
+}
+
+.container-display{
+    background: var(--keys-equal);
+    height: 310px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 5px;
+    display: flex;
+    position: relative;
+}
+
+
+
+.display-result{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+    position: absolute;
+    bottom: 16px; 
+    right: 16px; 
+}
+
+.container-operations{
+    background: var(--keys-equal);
+    height: 315px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 20px;
+    margin: 5px;
+    display: flex;
+    position: relative;
+}
+
+.container-operations-left{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 200px;
+}
+
+.element{
+    border: 0.93px solid #001e34;
+    width: 48px;
+    height: 39px;
+    background: #002b4a;
+}

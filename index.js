@@ -1,20 +1,45 @@
-const add = function(a, b) {
-	return a + b;
+const add = function(firstNumber, secondNumber) {
+	return firstNumber + secondNumber;
 };
 
-const subtract = function(a, b) {
-	return a - b;
+const subtract = function(firstNumber, secondNumber) {
+	return firstNumber - secondNumber;
 };
 
-const multiply = function(a, b){
-    return a * b;
+const multiply = function(firstNumber, secondNumber){
+    return firstNumber * secondNumber;
 }
 
-const divide = function(a, b){
-    return a / b;
+const divide = function(firstNumber, secondNumber){
+    return firstNumber / secondNumber;
 }
 
-// Do not edit below this line
+let firstNumber;
+let operator;
+let secondNumber;
+
+function operate(operator, firstNumber, secondNumber){
+    switch(operator){
+        case '+':
+            return add(firstNumber, secondNumber);
+        
+        case '-':
+            return subtract(firstNumber, secondNumber);
+
+        case '*':
+            return multiply(firstNumber, secondNumber);
+
+        case '/':
+            return divide(firstNumber, secondNumber);
+
+        default:
+            return NaN;
+    }
+}
+
+
+
+
 module.exports = {
   add,
   subtract,
