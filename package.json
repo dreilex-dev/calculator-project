@@ -1,0 +1,29 @@
+{
+  "name": "calculator-project",
+  "version": "1.0.0",
+  "description": "Simple calculator project",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dreilex-dev/calculator-project.git"
+  },
+  "keywords": [
+    "calculator",
+    "js",
+    "css",
+    "html",
+    "test"
+  ],
+  "author": "dreilex-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreilex-dev/calculator-project/issues"
+  },
+  "homepage": "https://github.com/dreilex-dev/calculator-project#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
