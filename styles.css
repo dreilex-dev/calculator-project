@@ -9,10 +9,12 @@
     --keys-color: #002b4a;
     --keys-equal: #ffa800;
     --text-color: #fff;
+    --hover-color: #008080;
 }
 body, html {
     height: 100%;
     margin: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +37,7 @@ body, html {
 .container-display{
     height: 442px;
     position: relative; 
+    margin: 18px;
 }
 
 .top-container{
@@ -56,12 +59,13 @@ body, html {
 
 .display-result{
     position: absolute;
-    bottom: 17px;
-    right: 18px;
+    bottom: 18px;
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 65px;
     color: var(--text-color);
+    width: 100%;
+    text-align: right;
 }
 
 
@@ -129,4 +133,12 @@ body, html {
 .btn-equal{
     border-bottom-right-radius: 30px;
     background: var(--keys-equal);
+}
+
+.btn{
+   cursor: pointer; 
+}
+
+.btn:hover{
+    background: var(--hover-color);
 }
