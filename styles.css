@@ -1,3 +1,7 @@
+/**{
+    outline: 2px red solid;
+}
+*/
 :root{
     --font-family: "Red Hat Display", sans-serif;
     --bg-color: #788698;
@@ -19,55 +23,110 @@ body, html {
 }
 
 .container{
-    border: 3px solid #001e34;
-    border-radius: 15px;
-    width: 360px;
-    height: 640px;
+    display: flex;
+    flex-direction: column;
+    border: 6.05px solid #001e34;
+    border-radius: 37px;
+    width: 396px;
+    height: 854px;
     background: var(--calculator-color-border);
 }
 
 .container-display{
-    background: var(--keys-equal);
-    height: 310px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin: 5px;
-    display: flex;
-    position: relative;
+    height: 442px;
+    position: relative; 
 }
 
+.top-container{
+    width: 396px;
+    height: 74px;
+    background: var(--keys-equal);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.top-container h1{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: var(--text-color)
+}
 
 
 .display-result{
+    position: absolute;
+    bottom: 17px;
+    right: 18px;
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 32px;
-    color: #fff;
-    position: absolute;
-    bottom: 16px; 
-    right: 16px; 
+    font-size: 65px;
+    color: var(--text-color);
 }
+
 
 .container-operations{
-    background: var(--keys-equal);
-    height: 315px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom: 20px;
-    margin: 5px;
     display: flex;
-    position: relative;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.container-operations-left{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 200px;
+
+.row{
+    display: flex;
+    align-items: center;
+    
 }
 
-.element{
-    border: 0.93px solid #001e34;
-    width: 48px;
-    height: 39px;
-    background: #002b4a;
+
+.white-text{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--text-color);
+}
+
+.orange-text{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--keys-equal);
+}
+
+.btn-bg-color-orange{
+    background: var(--keys-equal);
+}
+
+.btn-clear{
+    display: flex;
+    border: 1.88px solid #001e34;
+    width: 290px;
+    height: 79px;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.btn-size-prop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.88px solid #001e34;
+    width: 95px;
+    height: 79px;
+    background: var(--keys-color);
+    margin: 2px;
+}
+
+.row img{
+    height: 30px;
+}
+
+.btn-dot{
+    border-bottom-left-radius: 30px;
+}
+
+.btn-equal{
+    border-bottom-right-radius: 30px;
+    background: var(--keys-equal);
 }
