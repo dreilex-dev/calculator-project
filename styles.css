@@ -1,8 +1,5 @@
-/**{
-    outline: 2px red solid;
-}
-*/
-:root{
+/* CSS general */
+:root {
     --font-family: "Red Hat Display", sans-serif;
     --bg-color: #788698;
     --calculator-color-border: #001e34;
@@ -11,6 +8,7 @@
     --text-color: #fff;
     --hover-color: #008080;
 }
+
 body, html {
     height: 100%;
     margin: 0;
@@ -18,130 +16,145 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column;
     font-family: var(--font-family);
     background-color: var(--bg-color);
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    border: 6.05px solid #001e34;
+    border: 6px solid var(--calculator-color-border);
     border-radius: 37px;
-    width: 396px;
-    height: 854px;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
     background: var(--calculator-color-border);
+    margin: 20px;
 }
 
-.container-display{
-    height: 442px;
-    position: relative; 
-    margin: 18px;
-}
-
-.top-container{
-    width: 396px;
-    height: 74px;
+.top-container {
+    width: 100%;
     background: var(--keys-equal);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-}
-
-.top-container h1{
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 28px;
+    padding: 10px 0;
     text-align: center;
-    color: var(--text-color)
 }
 
-
-.display-result{
-    position: absolute;
-    bottom: 18px;
+.top-container h1 {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 65px;
+    font-size: 5vw; 
+    color: var(--text-color);
+}
+
+.container-display {
+    height: 20vh;
+    margin: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.display-result {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 10vw; 
     color: var(--text-color);
     width: 100%;
     text-align: right;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-
-.container-operations{
+.container-operations {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 
-
-.row{
+.row {
     display: flex;
     align-items: center;
-    
 }
 
-
-.white-text{
+.white-text {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 23px;
+    font-size: 5vw; 
     color: var(--text-color);
 }
 
-.orange-text{
+.orange-text {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 23px;
+    font-size: 5vw; 
     color: var(--keys-equal);
 }
 
-.btn-bg-color-orange{
+.btn-bg-color-orange {
     background: var(--keys-equal);
 }
 
-.btn-clear{
+.btn-clear {
     display: flex;
-    border: 1.88px solid #001e34;
-    width: 290px;
-    height: 79px;
+    border: 2px solid var(--calculator-color-border);
+    flex: 2;
+    height: 8vh;
     justify-content: center;
     align-items: center;
     margin: 2px;
 }
 
-.btn-size-prop{
+.btn-size-prop {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1.88px solid #001e34;
-    width: 95px;
-    height: 79px;
+    border: 2px solid var(--calculator-color-border);
+    flex: 1;
+    height: 8vh;
     background: var(--keys-color);
     margin: 2px;
 }
 
-.row img{
-    height: 30px;
-}
-
-.btn-dot{
+.btn-dot {
     border-bottom-left-radius: 30px;
 }
 
-.btn-equal{
+.btn-equal {
     border-bottom-right-radius: 30px;
     background: var(--keys-equal);
 }
 
-.btn{
-   cursor: pointer; 
-   --webkit-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
+.btn {
+    cursor: pointer;
+    user-select: none;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--hover-color);
+}
+
+
+@media (max-width: 768px) {
+    .top-container h1, .display-result, .white-text, .orange-text {
+        font-size: 7vw;
+    }
+
+    .btn-clear, .btn-size-prop {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-container h1, .display-result, .white-text, .orange-text {
+        font-size: 8vw;
+    }
+
+    .btn-clear, .btn-size-prop {
+        height: 12vh;
+    }
 }
